@@ -1,0 +1,44 @@
+# ---- Global ----
+*.log
+*.env
+*.venv
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Python / Django ----
+Back/*.pyc
+Back/__pycache__/
+Back/db.sqlite3
+Back/media/
+Back/staticfiles/
+Back/.venv/
+Back/env/
+Back/venv/
+Back/.pytest_cache/
+Back/.mypy_cache/
+Back/.coverage
+Back/htmlcov/
+Back/.DS_Store
+
+# ---- Virtual Envs (root level) ----
+venv/
+env/
+.venv/
+
+# ---- Node / React ----
+Front/ecommerce/node_modules/
+Front/ecommerce/.env
+Front/ecommerce/build/
+Front/ecommerce/dist/
+Front/ecommerce/.cache/
+Front/ecommerce/.DS_Store
+
+# ---- VSCode / IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- OS ----
+Thumbs.db
+.DS_Store

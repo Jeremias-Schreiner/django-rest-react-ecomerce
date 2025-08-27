@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
                 <div className="text-2xl font-bold hover:cursor-pointer">Mercopolis </div>
                 <button
-                    className="md:hidden block"
+                    className="lg:hidden block"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <svg
@@ -42,8 +42,8 @@ export default function Navbar() {
                     </svg>
                 </button>
 
-                <div className="hidden md:flex">
-                    <form onSubmit={handleSearch} className="flex items-cente">
+                <div className="hidden lg:flex">
+                    <form onSubmit={handleSearch} className="flex items-center md:mx-4">
                         <input
                             type="text"
                             placeholder="Buscar..."
@@ -53,14 +53,14 @@ export default function Navbar() {
                         />
                         <button
                             type="submit"
-                            className="px-3 py-1 rounded-r-md hover:bg-blue-200 bg-blue-100"
+                            className="px-1 py-1 rounded-r-md hover:bg-blue-200 bg-blue-100"
                         >
                             🔍
                         </button>
                     </form>
                 </div>
 
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden items-center gap-4 lg:flex">
                     <a href="#" className="hover:text-blue-400 font-bold">Home</a>
                     <a href="#" className="hover:text-blue-400 font-bold">Features</a>
                     <a href="#" className="hover:text-blue-400 font-bold">Pricing</a>
@@ -70,7 +70,7 @@ export default function Navbar() {
             </div>
 
             {isOpen && (
-                <div className="flex flex-col gap-3 mt-3 md:hidden">
+                <div className="flex flex-col gap-3 mt-3 lg:hidden">
                     <a href="#" className="hover:text-gray-400">Home</a>
                     <a href="#" className="hover:text-gray-400">Features</a>
                     <a href="#" className="hover:text-gray-400">Pricing</a>

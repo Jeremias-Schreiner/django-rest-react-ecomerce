@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ export default function Navbar() {
     return (
         <nav className="bg-blue-950 text-white px-4 py-3">
             <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold hover:cursor-pointer">Mercopolis </div>
+                <div className="text-2xl font-bold hover:cursor-pointer"><Link to="/">Mercopolis</Link></div>
                 <button
                     className="lg:hidden block"
                     onClick={() => setIsOpen(!isOpen)}
@@ -61,20 +62,20 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden items-center gap-4 lg:flex">
-                    <a href="#" className="hover:text-blue-400 font-bold">Home</a>
-                    <a href="#" className="hover:text-blue-400 font-bold">Features</a>
-                    <a href="#" className="hover:text-blue-400 font-bold">Pricing</a>
-                    <a href="#" className="hover:text-blue-400 font-bold">About</a>
+                    <Link to="/" className="hover:text-blue-400 font-bold">Home</Link>
+                    <Link to="/features" className="hover:text-blue-400 font-bold">Features</Link>
+                    <Link to="/pricing" className="hover:text-blue-400 font-bold">Pricing</Link>
+                    <Link to="/about" className="hover:text-blue-400 font-bold">About</Link>
 
                 </div>
             </div>
 
             {isOpen && (
                 <div className="flex flex-col gap-3 mt-3 lg:hidden">
-                    <a href="#" className="hover:text-gray-400">Home</a>
-                    <a href="#" className="hover:text-gray-400">Features</a>
-                    <a href="#" className="hover:text-gray-400">Pricing</a>
-                    <a href="#" className="hover:text-gray-400">About</a>
+                    <Link to="/" className="hover:text-gray-400">Home</Link>
+                    <Link to="/features" className="hover:text-gray-400">Features</Link>
+                    <Link to="/pricing" className="hover:text-gray-400">Pricing</Link> //Este no me termina de gustar quizas lo haga premium o algo asi
+                    <Link to="/about" className="hover:text-gray-400">About</Link>
 
                     <form onSubmit={handleSearch} className="flex mt-2">
                         <input
